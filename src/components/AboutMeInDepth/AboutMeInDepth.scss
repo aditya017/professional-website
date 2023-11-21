@@ -1,0 +1,42 @@
+.slick-arrow {
+  display: none !important;
+}
+
+.slick-dots li button:before {
+  font-size: 25px !important;
+  color: #f23e02 !important;
+}
+
+.textSty {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  margin: 20px 100px 100px;
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: 13px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 15px;
+  }
+}
+
+.HdrSty {
+  text-align: center;
+  @media (max-width: 767px) {
+    font-size: 33px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: 40px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 45px;
+  }
+}
+.slick-dots {
+  position: absolute;
+  bottom: 10px !important; /* Adjust this value to move the dots up or down */
+  width: 100%;
+}

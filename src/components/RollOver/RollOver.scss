@@ -1,0 +1,27 @@
+.rolling-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../../assets/images/caliDrive.jpg');
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.centered-content {
+  text-align: center;
+}

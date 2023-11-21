@@ -3,7 +3,15 @@ import { useAppDispatch, useAppSelector } from './store/hooks.ts';
 import { useEffect, useState } from 'react';
 import { dayNightIdentifier } from './store/features/DayTimeBlnSlice/dayTimeBlnSlice.ts';
 import { firstRunIdentifier } from './store/features/initialRunCompBln/initialRunCompBln.ts';
-import { Grid } from '@mui/material';
+import dayImage from '../src/assets/images/goldenBridge.jpeg';
+import nightImage from '../src/assets/images/nightTime.jpg';
+import santaMonicaDay from '../src/assets/images/santaMonica.jpg';
+import caliNightSky from '../src/assets/images/caliNightSky.jpg';
+import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
+import AboutMeInDepth from './components/AboutMeInDepth';
+import SocialMedia from './components/SocialMedia';
+import RollOver from './components/RollOver';
 
 function ProfessionalSite() {
   const [isDay, setIsDay] = useState(false);
@@ -25,20 +33,28 @@ function ProfessionalSite() {
 
   return (
     <div>
-      <Grid container spacing={2}>
-        <Grid item lg={6} sm={6} xs={12}>
-          hello
-        </Grid>
-        <Grid item lg={6} sm={6} xs={12}>
-          4
-        </Grid>
-        <Grid item lg={6} sm={6} xs={12}>
-          hello2
-        </Grid>
-        <Grid item lg={6} sm={6} xs={12}>
-          4
-        </Grid>
-      </Grid>
+      {!canWeRun ? (
+        <>
+          <div
+            id='appContent'
+            style={{ backgroundImage: `url(${isDay ? dayImage : nightImage})` }}
+          >
+            <NavBar />
+            <HomePage />
+          </div>
+          <div
+            id='appContent'
+            style={{
+              backgroundImage: `url(${isDay ? santaMonicaDay : caliNightSky})`,
+            }}
+          >
+            <AboutMeInDepth />
+            <SocialMedia />
+          </div>
+        </>
+      ) : (
+        <RollOver />
+      )}
     </div>
   );
 }

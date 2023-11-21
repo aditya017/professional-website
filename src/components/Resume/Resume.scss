@@ -1,0 +1,162 @@
+.resumePageSty {
+  background-color: black;
+}
+
+.dwnLoadStyle {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+  font-size: 11px;
+  @media (max-width: 767px) {
+    margin-right: 39px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    margin-right: 66px;
+  }
+  @media (min-width: 1024px) {
+    margin-right: 66px;
+  }
+}
+
+.paperStyle {
+  background-color: #191a19 !important;
+  margin: 20px;
+  color: white !important;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.imgSty {
+  @media (max-width: 767px) {
+    width: 76px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 139px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 1024px) {
+    width: 200px;
+  }
+}
+
+.grdFlx {
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.txt-aln {
+  text-align: center;
+}
+
+.hdrTxtSty {
+  color: #00bfff;
+  @media (max-width: 767px) {
+    font-size: 17px;
+    font-weight: 400;
+    padding-left: 17px;
+    padding-top: 5px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: 25px;
+    font-weight: 400;
+
+    padding-left: 87px;
+    padding-top: 30px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 25px;
+    font-weight: 400;
+    padding-left: 87px;
+    padding-top: 30px;
+  }
+}
+
+.lstSty {
+  @media (max-width: 767px) {
+    padding-left: 46px;
+    font-size: 12px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding-left: 129px;
+    font-size: 13px;
+  }
+  @media (min-width: 1024px) {
+    padding-left: 129px;
+    font-size: 14px;
+  }
+}
+
+.flxTechStack {
+  @media (max-width: 767px) {
+    display: flex;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    display: flex;
+  }
+  @media (min-width: 1024px) {
+  }
+}
+
+.rgtCnt {
+  padding-left: 31px;
+  padding-top: 8px;
+}
+
+.hdrTxtStyRgt {
+  color: #00bfff;
+  font-size: 25px;
+  font-weight: 400;
+  padding-top: 24px;
+}
+
+.subHdr {
+  color: #00bfff;
+  font-size: 17px;
+  font-weight: 400;
+  padding-top: 14px;
+}
+
+.dvcSpecLay {
+  @media (max-width: 767px) {
+    padding-left: 47px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding-left: 138px;
+  }
+  @media (min-width: 1024px) {
+  }
+}
+
+.textDvcSty {
+  @media (max-width: 767px) {
+    font-size: 12px;
+    padding-right: 4px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: 13px;
+    padding-right: 4px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 14px;
+  }
+}
+
+.jstFnt {
+  @media (max-width: 767px) {
+    font-size: 12px;
+    padding-right: 10px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: 13px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 14px;
+  }
+}
