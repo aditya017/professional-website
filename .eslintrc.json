@@ -6,7 +6,8 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -28,6 +29,7 @@
         "plugin:react-hooks/recommended"
     ],
     "rules": {
+        "@typescript-eslint/semi": ["error", "always"],
         "no-unused-vars": "warn",
         "eqeqeq": ["error", "always"],
         "no-console": "warn",
@@ -36,7 +38,7 @@
         "indent": ["error", 2],
         "quotes": ["error", "single"],
         "no-trailing-spaces": "error",
-        "react/prop-types": "warn", // For React projects
-        "@typescript-eslint/no-explicit-any": "warn" // For TypeScript projects
+        "react/prop-types": "warn",
+        "@typescript-eslint/no-explicit-any": "warn"
     }
 }
