@@ -3,6 +3,7 @@ import { useAppSelector } from '../../store/hooks.ts';
 import { useEffect } from 'react';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import { Grid } from '@mui/material';
 
 const DateTime = () => {
   const isItBright = useAppSelector((state) => state.isItDay.isItDay);
@@ -43,13 +44,17 @@ const DateTime = () => {
     }
   };
   return (
-    <p className='dateCtr'>
-      <CurrentHourOfTheDay />
-      <span style={{ color: isItBright ? '#FFA500' : '#ffd700' }}>
-        <span className='cstDateStyle'>{currentDateTime.getDate()}</span>
-        <span className='monthStyle'>{formattedDate.split(' ')[0]}</span>
-      </span>
-    </p>
+    <Grid container>
+      <Grid item xs={12} md={12} className='dwnLoadStyle'>
+        <div className='dateCtr'>
+          <CurrentHourOfTheDay />
+          <span style={{ color: isItBright ? '#FFA500' : '#ffd700' }}>
+            <span className='cstDateStyle'>{currentDateTime.getDate()}</span>
+            <span className='monthStyle'>{formattedDate.split(' ')[0]}</span>
+          </span>
+        </div>
+      </Grid>
+    </Grid>
   );
 };
 

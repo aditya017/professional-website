@@ -2,8 +2,15 @@ import './SocialMedia.scss';
 import { Tooltip } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import { handleCallClick, sendAnEmail } from '../../utils/helperFunctions.ts';
 
-const SocialMedia = () => {
+interface mediaProps {
+  iconClr?: boolean;
+}
+
+const SocialMedia = ({ iconClr }: mediaProps) => {
   const redirectToLinkedIn = () => {
     const url: string = 'https://www.linkedin.com/in/aditya017/';
     window.open(url, '_blank');
@@ -34,7 +41,7 @@ const SocialMedia = () => {
             ml: 3,
             mt: 3,
             fontSize: '40px',
-            color: 'white',
+            color: `${iconClr ? 'white' : 'black'}`,
             cursor: 'pointer',
           }}
         />
@@ -47,7 +54,7 @@ const SocialMedia = () => {
             ml: 3,
             mt: 3,
             fontSize: '40px',
-            color: 'white',
+            color: `${iconClr ? 'white' : 'black'}`,
             cursor: 'pointer',
           }}
         />
@@ -60,7 +67,7 @@ const SocialMedia = () => {
             ml: 3,
             mt: 3,
             fontSize: '40px',
-            color: 'white',
+            color: `${iconClr ? 'white' : 'black'}`,
             cursor: 'pointer',
           }}
         />
@@ -73,7 +80,33 @@ const SocialMedia = () => {
             ml: 3,
             mt: 3,
             fontSize: '40px',
-            color: 'white',
+            color: `${iconClr ? 'white' : 'black'}`,
+            cursor: 'pointer',
+          }}
+        />
+      </Tooltip>
+      <Tooltip title='Email' arrow>
+        <EmailIcon
+          onClick={sendAnEmail}
+          sx={{
+            mr: 1,
+            ml: 3,
+            mt: 3,
+            fontSize: '40px',
+            color: `${iconClr ? 'white' : 'black'}`,
+            cursor: 'pointer',
+          }}
+        />
+      </Tooltip>
+      <Tooltip title='Phone' arrow>
+        <PhoneIcon
+          onClick={handleCallClick}
+          sx={{
+            mr: 1,
+            ml: 3,
+            mt: 3,
+            fontSize: '40px',
+            color: `${iconClr ? 'white' : 'black'}`,
             cursor: 'pointer',
           }}
         />

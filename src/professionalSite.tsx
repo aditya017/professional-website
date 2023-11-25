@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { dayNightIdentifier } from './store/features/DayTimeBlnSlice/dayTimeBlnSlice.ts';
 import { firstRunIdentifier } from './store/features/initialRunCompBln/initialRunCompBln.ts';
 import dayImage from '../src/assets/images/goldenBridge.jpeg';
-import nightImage from '../src/assets/images/nightTime.jpg';
+import nightImage from '../src/assets/images/nightTimeCompressed.jpg';
 import santaMonicaDay from '../src/assets/images/santaMonica.jpg';
 import caliNightSky from '../src/assets/images/caliNightSky.jpg';
 import NavBar from './components/NavBar';
@@ -39,7 +39,7 @@ function ProfessionalSite() {
             id='appContent'
             style={{ backgroundImage: `url(${isDay ? dayImage : nightImage})` }}
           >
-            <NavBar />
+            <NavBar noHome={true} />
             <HomePage />
           </div>
           <div
@@ -49,7 +49,7 @@ function ProfessionalSite() {
             }}
           >
             <AboutMeInDepth />
-            <SocialMedia />
+            <SocialMedia iconClr={true} />
           </div>
         </>
       ) : (

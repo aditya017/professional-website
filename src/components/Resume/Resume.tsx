@@ -12,24 +12,24 @@ import {
   userDetails,
   vanGuardRes,
 } from '../../utils/constants.ts';
-import DownloadIcon from '@mui/icons-material/Download';
 import adityaT from '../../assets/images/adityaThummala.png';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import SocialMedia from '../SocialMedia';
 import './Resume.scss';
+import { handleCallClick, sendAnEmail } from '../../utils/helperFunctions.ts';
 
 const Resume = () => {
   return (
     <div className='resumePageSty'>
-      <NavBar />
+      <NavBar noResume={true} />
       <Grid container>
-        <Grid item xs={12} md={12} className='dwnLoadStyle'>
+        {/*<Grid item xs={12} md={12} className='dwnLoadStyle'>
           <DownloadIcon
             sx={{ mr: 1, ml: 3, fontSize: '20px', color: 'white' }}
           />
           <span style={{ color: 'white', marginRight: '2rem' }}>Download</span>
-        </Grid>
+        </Grid>*/}
       </Grid>
       <div className='paperStyle'>
         <Grid container>
@@ -46,6 +46,7 @@ const Resume = () => {
             </p>
             <p className='textDvcSty'>
               <EmailIcon
+                onClick={sendAnEmail}
                 sx={{
                   mr: 1,
                   ml: 1,
@@ -57,6 +58,7 @@ const Resume = () => {
             </p>
             <p className='textDvcSty'>
               <PhoneIcon
+                onClick={handleCallClick}
                 sx={{
                   mr: 1,
                   ml: 1,
@@ -139,7 +141,7 @@ const Resume = () => {
           </Grid>
         </Grid>
       </div>
-      <SocialMedia />
+      <SocialMedia iconClr={true} />
     </div>
   );
 };
