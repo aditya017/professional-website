@@ -122,7 +122,7 @@ const ContactUs = () => {
         <Typography variant='h5' sx={{ textAlign: 'center', fontWeight: 700 }}>
           Contact Us
         </Typography>
-        <form onSubmit={() => handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={2}>
             <Grid item lg={6} sm={6} xs={12}>
               <Controller
