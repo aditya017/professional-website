@@ -10,7 +10,6 @@ import {
   sabRes,
   shortExp,
   userDetails,
-  vanGuardRes,
 } from '../../utils/constants.ts';
 import adityaT from '../../assets/images/adityaThummala.png';
 import EmailIcon from '@mui/icons-material/Email';
@@ -97,37 +96,38 @@ const Resume = () => {
               <p className='textDvcSty'>{userDetails.education.col3}</p>
               <div className='hdrTxtStyRgt'>Experience:</div>
               <p className='textDvcSty'>{shortExp}</p>
-              <div className='subHdr'>Ford Motors:</div>
               <div className='subHdr'>
-                April 2021 - Till Date,San Fransisco,CA.
+                <strong>Ford Motors:</strong>
               </div>
-              <p className='textDvcSty'>{jobDescriptions.fordDes}</p>
+              <div className='subHdr'>
+                Apr 2021 - Till Date, San Fransisco, CA.
+              </div>
+              <p className='textDvcSty'>
+                <strong>{jobDescriptions.fordDes}</strong>
+              </p>
               <ul className='jstFnt'>
                 {fordRes.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
               <div className='subHdr'>Centene Corporation:</div>
-              <div className='subHdr'>Aug 2018–April 2021,Sacramento,CA.</div>
-              <p className='textDvcSty'>{jobDescriptions.cntDes}</p>
+              <div className='subHdr'>Aug 2018 – Apr 2021, Sacramento, CA.</div>
+              <p className='textDvcSty'>
+                <strong>{jobDescriptions.cntDes}</strong>
+              </p>
               <ul className='jstFnt'>
                 {centeneRes.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
               <div className='subHdr'>Sabre Corporation:</div>
-              <div className='subHdr'>July 2016–June 2018,Dallas,TX.</div>
-              <p className='textDvcSty'>{jobDescriptions.sbrDes}</p>
+              <div className='subHdr'>July 2015–June 2018,Dallas,TX.</div>
+              <p className='textDvcSty'>
+                {' '}
+                <strong>{jobDescriptions.sbrDes}</strong>
+              </p>
               <ul className='jstFnt'>
                 {sabRes.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-              <div className='subHdr'>Vanguard:</div>
-              <div className='subHdr'>Jan 2015–May 2016,Dallas,TX.</div>
-              <p className='textDvcSty'>{jobDescriptions.vanGuardDes}</p>
-              <ul className='jstFnt'>
-                {vanGuardRes.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>

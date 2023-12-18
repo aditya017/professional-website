@@ -50,7 +50,9 @@ const DateTime = () => {
           <CurrentHourOfTheDay />
           <span style={{ color: isItBright ? '#FFA500' : '#ffd700' }}>
             <span className='cstDateStyle'>{currentDateTime.getDate()}</span>
-            <span className='monthStyle'>{formattedDate.split(' ')[0]}</span>
+            <span className='monthStyle'>
+              {formattedDate.split(' ')[0].substring(0, 3)}
+            </span>
           </span>
         </div>
       </Grid>

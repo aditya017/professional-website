@@ -16,12 +16,18 @@ import {
 import { ChangeEvent, useEffect, useState } from 'react';
 import NavBar from '../NavBar';
 import BackGroundSpinner from '../BackGroundSpinner';
+import { IContactDetails } from '../../utils/modals.ts';
 
 const ContactUs = () => {
   let timerId: NodeJS.Timeout | null = null;
   const [open, setOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
-  const [userData, setUserData] = useState<any>({});
+  const [userData, setUserData] = useState<IContactDetails>({
+    email: '',
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+  });
 
   const {
     control,
@@ -89,7 +95,7 @@ const ContactUs = () => {
               Thank you <strong>{userData.firstName} </strong>{' '}
               <strong>{userData.lastName} </strong>for contacting. If you feel
               its urgent. Please contact me via my email
-              <strong> adityareddy597@gmail.com</strong> or at my cell
+              <strong> adityareddy597@gmail.com</strong> or my phone Number
               <strong> (515)-992-6592.</strong>
             </DialogContentText>
           </DialogContent>
@@ -116,7 +122,7 @@ const ContactUs = () => {
         <Typography variant='h5' sx={{ textAlign: 'center', fontWeight: 700 }}>
           Contact Us
         </Typography>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={() => handleSubmit(onSubmit)}>
           <Grid container spacing={2}>
             <Grid item lg={6} sm={6} xs={12}>
               <Controller

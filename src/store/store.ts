@@ -7,7 +7,7 @@ export const store = configureStore({
     isItDay: isItDayReducer,
     isItFirstRun: isItFirstRunReducer,
   },
-  devTools: true,
+  devTools: false,
 });
 
 export type RootState = ReturnType<typeof store.getState>;

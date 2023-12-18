@@ -28,9 +28,11 @@
   font-weight: 600;
   @media (max-width: 767px) {
     font-size: 22px;
+    margin-right: 29px;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     font-size: 37px;
+    margin-right: 49px;
   }
   @media (min-width: 1024px) {
     font-size: 40px;
